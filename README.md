@@ -55,3 +55,22 @@ It leverages **AWS Lambda**, **Amazon S3**, and **AWS Bedrock (Claude)** for bac
     http://localhost:3000
 ---
 
+### 🧩 FrontEnd (AWS Lambda)
+1. **Move to the Folder**
+   ```bash
+   cd frontend
+---
+2. ** Install Reuirements**
+   ```bash
+   npm install
+---
+3. **Run the Program**
+   ```bash
+   npm run dev
+---
+
+
+
+### Connection Overview
+
+Frontend (React)  --->  API Gateway  --->  AWS Lambda  --->  S3 / Bedrock
