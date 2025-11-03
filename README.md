@@ -71,13 +71,17 @@ It leverages **AWS Lambda**, **Amazon S3**, and **AWS Bedrock (Claude)** for bac
 
 ## ⚡ Connection Overview
 
-```mermaid
-graph LR
-A[💬 Frontend (React)] --> B[🌐 API Gateway]
-B --> C[⚙️ AWS Lambda (Python)]
-C --> D[(🪣 Amazon S3)]
-C --> E[(🧠 AWS Bedrock)]
+💬 **Frontend (React.js)**  
+⬇️ Sends user queries via HTTP request  
 
+🌐 **API Gateway**  
+⬇️ Routes the request securely  
+
+⚙️ **AWS Lambda (Python)**  
+↳ Fetches data from **Amazon S3**  
+↳ Calls **AWS Bedrock (Claude)** for intelligent responses  
+
+📤 **Response → Returned to Frontend Chat UI**
 
 ---
 
@@ -90,20 +94,6 @@ C --> E[(🧠 AWS Bedrock)]
 - Response is returned → displayed in the chat UI.
 
 ---
-
-If you don’t want to use **Mermaid diagrams**, here’s a **text-based styled version** (also copy-paste ready):
-
----
-
-### ⚡ **Connection Overview (Text Style)**
-```markdown
-## ⚡ Connection Overview
-
-💬 **Frontend (React.js)**  
-⬇️ Sends user queries via HTTP request  
-
-🌐 **API Gateway**  
-⬇️ Triggers backend logic  
 
 ⚙️ **AWS Lambda (Python)**  
 ↳ Fetches data from **Amazon S3**  
