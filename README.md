@@ -26,23 +26,3 @@ It leverages **AWS Lambda**, **Amazon S3**, and **AWS Bedrock (Claude)** for bac
 | **Hosting** | AWS Amplify / S3 static hosting |
 
 ---
-
-## ⚙️ Setup Instructions
-
-### 🧩 Backend (AWS Lambda)
-
-1. **Navigate to the backend folder:**
-   ```bash
-   cd backend
-2.Install Dependencies
-   ```bash
-   pip install -r requirements.txt
-3.Connect Lambda to API Gateway and create a new REST endpoint, e.g.:
-
-/GetCollegeInfo
-
-4.Ensure permissions:
-
-Your Lambda execution role should allow access to Amazon S3 and AWS Bedrock.
-
-5.Test the Lambda function using sample input from the AWS Console.
