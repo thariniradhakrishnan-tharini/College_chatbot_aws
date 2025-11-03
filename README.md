@@ -69,8 +69,44 @@ It leverages **AWS Lambda**, **Amazon S3**, and **AWS Bedrock (Claude)** for bac
    npm run dev
 ---
 
+## ⚡ Connection Overview
+
+```mermaid
+graph LR
+A[💬 Frontend (React)] --> B[🌐 API Gateway]
+B --> C[⚙️ AWS Lambda (Python)]
+C --> D[(🪣 Amazon S3)]
+C --> E[(🧠 AWS Bedrock)]
 
 
-### Connection Overview
+---
 
-Frontend (React)  --->  API Gateway  --->  AWS Lambda  --->  S3 / Bedrock
+✅ **How it works (explanation):**
+- **Frontend (React)** → Sends user questions to API Gateway.  
+- **API Gateway** → Routes requests securely to AWS Lambda.  
+- **AWS Lambda** → Executes logic, fetches or generates answers using:  
+  - **Amazon S3** → for static college data (faculty, syllabus, FAQs).  
+  - **AWS Bedrock** → for AI-generated responses (Claude model).  
+- Response is returned → displayed in the chat UI.
+
+---
+
+If you don’t want to use **Mermaid diagrams**, here’s a **text-based styled version** (also copy-paste ready):
+
+---
+
+### ⚡ **Connection Overview (Text Style)**
+```markdown
+## ⚡ Connection Overview
+
+💬 **Frontend (React.js)**  
+⬇️ Sends user queries via HTTP request  
+
+🌐 **API Gateway**  
+⬇️ Triggers backend logic  
+
+⚙️ **AWS Lambda (Python)**  
+↳ Fetches data from **Amazon S3**  
+↳ Calls **AWS Bedrock (Claude)** for intelligent responses  
+
+📤 **Response** → Returned to **Frontend Chat UI**
