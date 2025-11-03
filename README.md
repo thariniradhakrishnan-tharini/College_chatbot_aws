@@ -26,3 +26,32 @@ It leverages **AWS Lambda**, **Amazon S3**, and **AWS Bedrock (Claude)** for bac
 | **Hosting** | AWS Amplify / S3 static hosting |
 
 ---
+## ⚙️ Setup Instructions
+
+---
+
+### 🧩 Backend (AWS Lambda)
+
+1. **Navigate to the backend folder:**
+   ```bash
+   cd backend
+---
+2. **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+---
+3. **Create env file and Add the below to the env file**
+   ```bash
+   touch .env
+   
+    REACT_APP_API_URL=https://your-api-gateway-url.amazonaws.com/prod/chat
+---
+4. **Start the development server**
+    ```bash
+    npm start
+---
+5. **Visit the app in your browser at**
+    ```bash
+    http://localhost:3000
+---
+
